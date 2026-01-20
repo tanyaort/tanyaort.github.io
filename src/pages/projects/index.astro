@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects } from "../../data/projects.js";
+---
+
+<BaseLayout title="Projects | Tanya Ortega">
+  <h1 style="margin: 0 0 12px; font-size: 44px;">Projects</h1>
+
+  <p style="max-width: 70ch; margin: 0 0 28px;">
+    A selection of my work across data engineering, machine learning, and analytics.
+  </p>
+
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    "
+  >
+    {projects.map((p) => (
+      <article
+        style="
+          background: rgba(255,255,255,.06);
+          border: 1px solid rgba(255,255,255,.12);
+          border-radius: 16px;
+          padding: 18px;
+        "
+      >
+        <h3 style="margin: 0 0 8px;">{p.title}</h3>
+
+        <p style="margin: 0 0 14px; color: rgba(255,255,255,.72);">
+          {p.description}
+        </p>
+
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 14px;
+          "
+        >
+          {p.tags.map((t) => (
+            <span
+              style="
+                font-size: 12px;
+                padding: 6px 10px;
+                border-radius: 999px;
+                border: 1px solid rgba(255,255,255,.12);
+                background: rgba(255,255,255,.04);
+                color: rgba(255,255,255,.72);
+              "
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <a
+          href={p.github}
+          target="_blank"
+          rel="noreferrer"
+          style="color: #8b7bff; text-decoration: none;"
+        >
+          View on GitHub →
+        </a>
+      </article>
+    ))}
+  </div>
+</BaseLayout>
