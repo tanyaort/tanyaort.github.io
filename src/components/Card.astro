@@ -1,0 +1,32 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="card">
+  {title && <h2 class="card-title">{title}</h2>}
+  <div class="card-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .card {
+    height: 100%;
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(10px);
+  }
+
+  .card-title {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card-body {
+    line-height: 1.7;
+    opacity: 0.92;
+  }
+</style>

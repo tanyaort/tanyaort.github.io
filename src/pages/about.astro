@@ -1,12 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <BaseLayout title="About — Tanya Ortega">
   <section style="max-width: 1100px; margin: 0 auto; padding: 56px 24px;">
-    <h1 style="margin: 0 0 14px; font-size: 56px; line-height: 1.05;">
-      About Me
-    </h1>
+    <h1 style="margin: 0 0 14px; font-size: 56px; line-height: 1.05;">About Me</h1>
 
     <div style="max-width: 72ch;">
       <p style="margin: 0 0 14px; line-height: 1.8; opacity: 0.92;">
@@ -14,88 +13,92 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </p>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:18px; margin-top:26px;">
-      
-      <!-- Row 1 -->
-      <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:18px;">
-        <div class="card">
-          <h2 style="margin:0 0 10px; font-size: 20px;">What I Do</h2>
-          <p style="margin:0; line-height: 1.7; opacity: .92;">
-            I work across data analysis and applied machine learning, building reproducible workflows, dashboards, and reports that support operational, business, and policy-driven decision making.
-            <br /><br />
-            My experience includes ETL pipelines, data cleaning, forecasting, and classification modeling across education, healthcare, and transportation data.
-          </p>
+    <div class="grid">
+      <Card title="What I Do">
+        <p style="margin:0;">
+          I work across data analysis and applied machine learning, building reproducible workflows, dashboards, and reports that support operational, business, and policy-driven decision making.
+          <br /><br />
+          My experience includes ETL pipelines, data cleaning, forecasting, and classification modeling across education, healthcare, and transportation data.
+        </p>
+      </Card>
+
+      <Card title="Academic Recognition">
+        <p style="margin:0;">
+          I was nominated for the University of San Diego’s <strong>Alcalá 100 Award</strong>, which recognizes graduating students for exceptional academic achievement, leadership, and impact within the university community.
+          <br /><br />
+          This nomination was submitted by faculty in recognition of my contributions, professionalism, and impact within the Applied Data Science and Applied Artificial Intelligence programs.
+        </p>
+      </Card>
+
+      <Card title="Education">
+        <p style="margin:0;">
+          <strong>Master of Data Science</strong> — University of San Diego<br />
+          GPA: 3.94
+          <br /><br />
+          <strong>Bachelor of Arts in Psychology</strong> — California State University, Channel Islands
+        </p>
+      </Card>
+
+      <Card title="Technical Toolkit">
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span class="pill">Python</span>
+          <span class="pill">SQL</span>
+          <span class="pill">ETL</span>
+          <span class="pill">Data Cleaning</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Time Series Forecasting</span>
+          <span class="pill">Dashboards</span>
+          <span class="pill">Streamlit</span>
+          <span class="pill">Excel</span>
+          <span class="pill">Technical Documentation</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">Public Datasets</span>
         </div>
+      </Card>
 
-        <div class="card">
-          <h2 style="margin:0 0 10px; font-size: 20px;">Academic Recognition</h2>
-          <p style="margin:0; line-height: 1.7; opacity: .92;">
-            I was nominated for the University of San Diego’s <strong>Alcalá 100 Award</strong>, which recognizes graduating students for exceptional academic achievement, leadership, and impact within the university community.
-            <br /><br />
-            This nomination was submitted by faculty in recognition of my contributions, professionalism, and impact within the Applied Data Science and Applied Artificial Intelligence programs.
-          </p>
-        </div>
-      </div>
+      <!-- Partnerships spans full width -->
+      <div class="span-2">
+        <Card title="Partnerships & Community">
+          <ul style="margin:0; padding-left:18px;">
+            <li><strong>Twitch Latin Guild</strong> — Community member & team contributor</li>
+            <li><strong>Hot Topic Partner</strong> — Brand collaboration partner</li>
+            <li><strong>Razer Creator Program</strong> — Selected creator partner</li>
+          </ul>
 
-      <!-- Row 2 -->
-      <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:18px;">
-        <div class="card">
-          <h2 style="margin:0 0 10px; font-size: 20px;">Education</h2>
-          <p style="margin:0; line-height: 1.7; opacity: .92;">
-            <strong>Master of Data Science</strong> — University of San Diego<br />
-            GPA: 3.94
-            <br /><br />
-            <strong>Bachelor of Arts in Psychology</strong> — California State University, Channel Islands
-          </p>
-        </div>
-
-              <!-- Row 3 -->
-<div style="display:flex; justify-content:center; margin-top:8px;">
-  <div class="card" style="max-width:520px; width:100%;">
-
-    <h2 style="margin:0 0 12px; font-size:20px;">Partnerships & Community</h2>
-
-    <ul style="margin:0; padding-left:18px; line-height:1.7; opacity:.92;">
-      <li><strong>Twitch Latin Guild</strong> — Community member & team contributor</li>
-      <li><strong>Hot Topic Partner</strong> — Brand collaboration partner</li>
-      <li><strong>Razer Creator Program</strong> — Selected creator partner</li>
-    </ul>
-
-    <!-- Logos at the bottom -->
-    <div style="margin-top:16px; display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <img src="/twitch-latin-guild.png" alt="Twitch Latin Guild" style="height:62px; opacity:.8;" />
-      <img src="/hot-topic.png" alt="Hot Topic Partner" style="height:65px; opacity:.8;" />
-      <img src="/razer.png" alt="Razer Creator Program" style="height:65px; opacity:.8;" />
-    </div>
-
-  </div>
-</div>
-
-
-
-
-        <div class="card">
-          <h2 style="margin:0 0 10px; font-size: 20px;">Technical Toolkit</h2>
-          <div style="display:flex; flex-wrap:wrap; gap:10px;">
-            <span class="pill">Python</span>
-            <span class="pill">SQL</span>
-            <span class="pill">ETL</span>
-            <span class="pill">Data Cleaning</span>
-            <span class="pill">Machine Learning</span>
-            <span class="pill">Time Series Forecasting</span>
-            <span class="pill">Dashboards</span>
-            <span class="pill">Streamlit</span>
-            <span class="pill">Excel</span>
-            <span class="pill">Technical Documentation</span>
-            <span class="pill">GitHub</span>
-            <span class="pill">Public Datasets</span>
+          <div style="margin-top:16px; display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+            <img src="/twitch-latin-guild.png" alt="Twitch Latin Guild" style="height:50px; opacity:.7;" />
+            <img src="/hot-topic.png" alt="Hot Topic Partner" style="height:50px; opacity:.8;" />
+            <img src="/razer.png" alt="Razer Creator Program" style="height:50px; opacity:.8;" />
           </div>
-        </div>
+        </Card>
       </div>
-
     </div>
   </section>
+
+  <style>
+    .grid {
+      margin-top: 26px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .span-2 {
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .span-2 {
+        grid-column: auto;
+      }
+    }
+  </style>
 </BaseLayout>
+
 
 
 
