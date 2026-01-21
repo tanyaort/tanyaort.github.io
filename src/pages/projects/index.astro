@@ -2,7 +2,15 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 const projects = [
+
   {
+    title: "California Early Warning System",
+    description:
+      "Built a school-level Early Warning System (EWS) to identify CA public high schools at risk of low graduation outcomes using only public, non-PII datasets aligned with the ABC framework (Attendance, Behavior, Course performance).",
+    tags: ["Education", "Policy", "Analytics", "Public Data"],
+    github: "https://github.com/tanyaort/ca-early-warning-system",
+  },
+    {
     title: "Flight Delay & Cancellation Prediction (SAN / KSAN)",
     description:
       "Predicts flight delays and cancellations leaving out of San Diego International Airport by integrating 2 years of BTS on-time performance data with NOAA weather observations (NCEI ISD) from KSAN.",
@@ -10,14 +18,7 @@ const projects = [
     github: "https://github.com/tanyaort/Flight-Delay-and-Predicitons",
   },
   {
-    title: "California Early Warning System (Capstone)",
-    description:
-      "Built a school-level Early Warning System (EWS) to identify CA public high schools at risk of low graduation outcomes using only public, non-PII datasets aligned with the ABC framework (Attendance, Behavior, Course performance).",
-    tags: ["Education", "Policy", "Analytics", "Public Data"],
-    github: "https://github.com/tanyaort/ca-early-warning-system",
-  },
-  {
-    title: "School Sentiment NLP (Reddit)",
+    title: "School Sentiment NLP",
     description:
       "Analyzes how people talk about schools in high-performing vs. low-performing districts using sentiment analysis and topic modeling on Reddit discussions to compare themes and perceptions.",
     tags: ["NLP", "Topic Modeling", "Sentiment", "Python"],
